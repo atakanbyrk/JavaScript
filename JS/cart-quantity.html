@@ -1,0 +1,50 @@
+<html>
+
+    <head>
+        <title>Cart &#45; Quantity</title>
+        
+        
+    </head>
+        
+    
+    <body>
+        <button onclick ="
+              console.log(`Cart quantity: ${cartQuantity}`);            
+        ">Show Quantity</button>
+        
+        <!-- var, let, const are for to create variable but use const by default since the other ones are have issues.
+        If we have to change a variable then we use "let" 
+-->
+
+        
+        <!-- cartQuantity +=1; 
+             cartQuantity = cartQuantity + 1;  
+             cartQuantity++;
+-- Shortcuts to reassign a variable to a new value -- -->
+
+        <button onclick="
+            cartQuantity = cartQuantity + 1; 
+            console.log(`Cart quantity: ${cartQuantity}`);
+        ">Add to Cart</button>
+        
+        <button onclick="
+            cartQuantity = cartQuantity + 2;
+            console.log(`Cart quantity: ${cartQuantity}`);
+                         ">+2</button>
+        <button onclick="
+            cartQuantity = cartQuantity + 3;
+            console.log(`Cart quantity: ${cartQuantity}`);
+                         ">+3</button>
+        
+        <button onclick="
+            cartQuantity = 0;
+            console.log(`Cart was reset.\nCart quantity: ${cartQuantity}`);
+                         ">Reset Cart</button>
+            
+        
+        <script>
+            var cartQuantity = 0;
+        
+        </script>
+    </body>
+</html>

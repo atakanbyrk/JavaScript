@@ -1,0 +1,149 @@
+<html>
+
+    <head>
+        <title>Objects</title>
+        
+        <!-- Normalize.css -->
+    
+    </head>
+    
+    <body>
+        
+        <h1>Objects</h1>
+        
+        
+        <script>
+        
+/*       const product = {
+              name: 'socks',
+              price: `€125.90`
+          }; 
+            
+            console.log(product); 
+            console.log(product.name);
+            console.log(product.price);
+            
+            product.name = 't-shirt';
+            console.log(product); 
+            console.log(product.name);
+            
+            product.newProperty = true;
+            console.log(product);
+            
+            product.Material = 'cotton';
+            console.log(product);
+        
+            delete product.newProperty;
+            console.log(product);
+            
+*/
+            
+                const product2 = {
+                name: 'jean',
+                'delivery-time': '1 day',
+                rating: { // nested objects
+                    stars: 4.5,
+                    count: 87 //how many rating a product has
+                },
+                fun: function function1() {
+                    console.log('function inside an object');
+                }
+            };
+            
+            console.log(product2);
+            console.log(product2.name);
+            console.log(product2['name']);
+            
+//            console.log(product2.name);  same qith below
+//            console.log(product2['name']); however, [] is better practice.
+  
+            console.log(product2['delivery-time']);
+            
+            console.log(product2.rating.count);
+            console.log(product2.rating.stars);
+            product2.fun();
+            
+
+
+/*            ---JSON (Javascript Object Notation) more universal---  
+
+    Built in JSON Object convert JavaScript Object to JSON
+*/
+            
+            console.log(JSON.stringify(product2));
+
+/*        
+    Convert JSON to JavaScript Object
+ */ 
+           
+        const JsonString = JSON.stringify(product2)    
+            console.log(JSON.parse(JsonString));
+/*
+
+    variables are temporary store, when we refresh the page, they will be reset. Therefore, we need "local storage".
+*/           
+    const alertUpper = 'alert'.toUpperCase();
+            
+    console.log('alert'.length);
+    console.log(alertUpper);
+    console.log(alertUpper.toLowerCase());
+            
+    
+            
+   // -------------------------------------------------------------------------         
+    
+            
+            
+    const object1 = {
+      message: 'hello'  
+    };
+    
+    const object2 = object1;
+            
+    object1.message = 'Good Job!';
+    console.log(object1);
+    console.log(object2);
+        // still we can change the variable when we use const. In this case, eventough we only changed the object property, object2 also changed with it. Objects are references
+            
+            
+            // --- we cannot compare objects directly. ---
+            
+    const object3 = {
+        message: 'Good Job!'
+    };
+            
+    console.log(object3 === object1);
+    console.log(object2 === object1);
+            
+            
+    const object4 = {
+        message: 'Good Job!',
+        price: 799
+    };
+            
+    
+          // --- Taking properties out of an object shortcut ---  
+    
+    // const message = object4.message;
+    const { message, price } = object4;
+    console.log(message);
+    console.log(`Price: €${price}`);  
+            
+            
+    const object5 = {
+        // message: message
+        message, //shortcut of the above
+        method: function function1() {
+            console.log('method');
+        }
+    };
+            
+    console.log(object5);
+    object5.method();
+    
+        
+        </script> 
+        
+    </body>
+    
+</html>
